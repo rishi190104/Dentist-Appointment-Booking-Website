@@ -1,12 +1,13 @@
 
 import './App.css'
+import Header from './components/Header/Header'
 
 function App() {
  
 
   return (
     <>
-     <h1 className='w-full max-w-screen-xl mx-auto bg-red-300'>Hello world</h1>
+    <Header/>
     </>
   )
 }
