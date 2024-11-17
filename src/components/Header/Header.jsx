@@ -31,11 +31,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full h-32  bg-green-400 ">
+    <header className="w-full h-32  bg-teal-400 ">
       <div className="w-full flex justify-around items-center max-w-screen-lg mx-auto ">
         <img src={logo} alt="Logo" className="w-[10rem]" />
 
-        <ul className="hidden md:flex gap-x-4 text-xl text-white cursor-pointer ">
+        <ul className="hidden md:flex gap-x-4 text-xl text-black cursor-pointer ">
           {lists.map(({ id, list }) => (
             <li key={id} className="hover:scale-105 hover:text-green-900">
               {list}
@@ -74,8 +74,8 @@ const Header = () => {
         )}
 
         <button
-          className="bg-green-700 text-white font-bold h-10 px-3 py-2 rounded-md  
-         hover:bg-teal-700 top-32 mt-2 absolute md:static md:flex
+          className="bg-teal-700 text-white font-bold h-10 px-3 py-2 rounded-md  
+         hover:bg-teal-500 top-32 mt-2 absolute md:static md:flex
         "
         >
           Schedule a Callback
