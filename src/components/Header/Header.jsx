@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
-import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -31,7 +30,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full h-32  bg-teal-400 ">
+    <header className="w-full h-32  bg-teal-400">
       <div className="w-full flex justify-around items-center max-w-screen-lg mx-auto ">
         <img src={logo} alt="Logo" className="w-[10rem]" />
 

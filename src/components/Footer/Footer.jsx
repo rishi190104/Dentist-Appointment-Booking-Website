@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/logo.png";
+import logo from "../../assets/logo.png";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
