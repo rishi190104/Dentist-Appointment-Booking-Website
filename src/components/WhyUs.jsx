@@ -41,7 +41,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full bg-gradient-to-b from-teal-200 to-transparent ">
       <h1 className="flex justify-center items-center text-4xl py-7 font-bold text-teal-900">
         Why to Choose Us ?
       </h1>

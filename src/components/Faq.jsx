@@ -57,7 +57,7 @@ const Faq = () => {
   ];
 
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full bg-gradient-to-b from-teal-200 to-transparent ">
       <h1 className="flex justify-center items-center text-4xl font-bold text-teal-900 py-7">
         FAQ
       </h1>

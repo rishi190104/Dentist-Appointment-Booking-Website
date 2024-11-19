@@ -2,7 +2,7 @@ import React from "react";
 
 const Dentist = () => {
   return (
-    <section className="w-full h-full ">
+    <section className="w-full h-full bg-gradient-to-t from-teal-200 to-transparent  ">
       <h1 className="flex justify-center items-center text-4xl font-bold text-teal-900 pt-7">
         About the Dentist's
       </h1>

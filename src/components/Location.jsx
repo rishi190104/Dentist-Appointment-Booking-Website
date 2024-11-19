@@ -5,10 +5,10 @@ import PlaceIcon from '@mui/icons-material/Place';
 
 const Location = () => {
   return (
-    <main className='w-full h-full my-5 bg-teal-400 '>
-    <div className='flex justify-center items-center max-w-screen-xl mx-auto py-7 gap-x-10 md:flex-row flex-col'>
+    <main className='w-full h-full py-5 bg-gradient-to-t from-teal-200 to-transparent  '>
+    <div className='flex justify-center items-center max-w-screen-xl mx-auto py-7 gap-x-10 md:flex-row flex-col '>
      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15072.171967000551!2d73.17036244659825!3d19.19332450527493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7934229a15eb3%3A0x6589f4d3043b793a!2sDr%20Shweta&#39;s%20Dental%20Speciality%20Centre!5e0!3m2!1sen!2sin!4v1731913707913!5m2!1sen!2sin" width="600" height="450" style={{border: "0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-     className='w-80 h-full md:w-[600px] md:h-[450px]'
+     className='w-80 h-full md:w-[600px] md:h-[450px] px-5'
      ></iframe>
      <div className='flex flex-col gap-y-2 p-5'>
         <h1 className='md:text-2xl text-xl font-bold flex items-center'>
