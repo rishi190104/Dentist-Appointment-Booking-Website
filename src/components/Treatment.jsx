@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Svg from "./Svg";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const Treatment = () => {
-  const [treatment, setTreatment] = useState(false);
+  useEffect(() => {
+        AOS.init({duration: 500});
+    }, [])
+  
   const [btn, setBtn] = useState(false);
 
   return (
@@ -17,9 +24,8 @@ const Treatment = () => {
       </h1>
       <div className=" md:flex md:flex-col flex-wrap md:m-0 mx-4">
         <div
-          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-right animate-once animate-duration-1000 animate-ease-out animate-normal animate-fill-forwards
-        "
+          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+          data-aos="fade-right" data-aos-duration="1000"
         >
 
           <h1 className="text-2xl font-bold  pb-2 flex items-center">
@@ -44,9 +50,8 @@ const Treatment = () => {
         </div>
         <br />
         <div
-          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-1500 animate-ease-out animate-normal animate-fill-forwards
-        "
+          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+          data-aos="fade-left" data-aos-duration="1500"
         >
           <h1 className="text-2xl font-bold  pb-2 flex items-center">
           <Svg />
@@ -70,9 +75,8 @@ const Treatment = () => {
         </div>
         <br />
         <div
-          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-right animate-once animate-duration-2000 animate-ease-out animate-normal animate-fill-forwards
-        "
+          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+          data-aos="fade-right" data-aos-duration="2000"
         >
           <h1 className="text-2xl font-bold  pb-2 flex items-center">
           <Svg />
@@ -96,9 +100,8 @@ const Treatment = () => {
         </div>
         <br />
         <div
-          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-2500 animate-delay-500 animate-ease-out animate-normal animate-fill-forwards
-        "
+          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+          data-aos="fade-left"
         >
           <h1 className="text-2xl font-bold  pb-2 flex items-center">
           <Svg />
@@ -122,9 +125,8 @@ const Treatment = () => {
         </div>
         <br />
         <div
-          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-right animate-once animate-duration-3000 animate-delay-500 animate-ease-out animate-normal animate-fill-forwards
-        "
+          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+          data-aos="fade-right"
         >
           <h1 className="text-2xl font-bold  pb-2 flex items-center">
           <Svg />
@@ -147,9 +149,8 @@ const Treatment = () => {
         </div>
         <br />
         <div
-          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-right animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+          className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+          data-aos="fade-left"
         >
           <h1 className="text-2xl font-bold  pb-2 flex items-center">
           <Svg />
@@ -187,11 +188,10 @@ const Treatment = () => {
         {btn ? (
           <>
             <br />
-            <div className="animate-fade-down animate-once animate-duration-1000 animate-ease-in-out">
+            <div>
               <div
-                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+                data-aos="fade-right"
               >
                 <h1 className="text-2xl font-bold  pb-2 flex items-center">
                 <Svg />
@@ -216,9 +216,8 @@ const Treatment = () => {
               </div>
               <br />
               <div
-                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+                data-aos="fade-left"
               >
                 <h1 className="text-2xl font-bold  pb-2 flex items-center">
                 <Svg />
@@ -242,9 +241,8 @@ const Treatment = () => {
               </div>
               <br />
               <div
-                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+                data-aos="fade-right"
               >
                 <h1 className="text-2xl font-bold  pb-2 flex items-center">
                 <Svg />
@@ -267,9 +265,8 @@ const Treatment = () => {
               </div>
               <br />
               <div
-                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+                data-aos="fade-left"
               >
                 <h1 className="text-2xl font-bold  pb-2 flex items-center">
                 <Svg />
@@ -291,9 +288,8 @@ const Treatment = () => {
               </div>
               <br />
               <div
-                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+                data-aos="fade-right"
               >
                 <h1 className="text-2xl font-bold  pb-2 flex items-center">
                 <Svg />
@@ -316,9 +312,8 @@ const Treatment = () => {
               </div>
               <br />
               <div
-                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+                data-aos="fade-left"
               >
                 <h1 className="text-2xl font-bold  pb-2 flex items-center">
                 <Svg />
@@ -340,9 +335,8 @@ const Treatment = () => {
               </div>
               <br />
               <div
-                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5
-        animate-fade-left animate-once animate-duration-3000  animate-ease-out animate-normal animate-fill-forwards
-        "
+                className="bg-gradient-to-t from-teal-400 to-teal-600 max-w-screen-xl mx-auto rounded-md p-3 py-5"
+                data-aos="fade-right"
               >
                 <h1 className="text-2xl font-bold  pb-2 flex items-center">
                 <Svg />

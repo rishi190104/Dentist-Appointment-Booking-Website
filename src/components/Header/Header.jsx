@@ -46,7 +46,7 @@ const Header = () => {
              <li key={id} className="hover:scale-105 hover:text-green-900">
              <NavLink 
              to={to}
-             className={({isActive}) => `${isActive ? " text-green-900 font-bold text-xl" : "text-black"}
+             className={({isActive}) => `${isActive ? " text-green-900 font-bold text-xl border-b-2 border-teal-900" : "text-black"}
              hover:scale-105 hover:text-green-900
              `}
              >
@@ -77,12 +77,14 @@ const Header = () => {
            "
           >
           {lists.map(({ id, list,to }) => (
+            <>
              <li key={id} className="hover:scale-105 hover:text-green-900"
              onClick={() => {
               setNav(!nav)
              }}
              >
              <NavLink 
+             
              to={to}
              className={({isActive}) => `${isActive ? " text-green-900 font-bold text-xl" : "text-black"}
              hover:scale-105 hover:text-green-900
@@ -91,25 +93,30 @@ const Header = () => {
              {list}
              </NavLink>
              </li>
+             
+             </>
           ))}
           </ul>
         )}
       
 
-       <Link
-       to="Form"
+       <NavLink
+       to="/form"
+       
        smooth
        duration={500}
+       
        >
        
         <button
           className="bg-teal-700 text-white font-bold h-10 px-3 py-2 rounded-md  
-         hover:shadow-md hover:shadow-black top-32 mt-2 absolute md:static md:flex 
+         hover:shadow-md hover:shadow-black top-32 right-28 mt-2 absolute 
+          md:flex lg:static 
         "
         >
           Schedule a Callback
         </button>
-       </Link>
+       </NavLink>
       </div>
     </header>
   );

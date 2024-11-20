@@ -1,11 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const Form = ({className=""}) => {
+
+useEffect(() => {
+      AOS.init({duration: 1500});
+  }, [])
   const options = [
     {
       id: 1,
@@ -71,7 +79,9 @@ const Form = ({className=""}) => {
 
   return (
     <section name='Form' className="w-full h-full pt-16 bg-gradient-to-t from-teal-200 to-transparent">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto"
+      data-aos="fade-up"
+      >
         <h1 className="flex justify-center items-center text-3xl mb-5 font-bold text-teal-900">Book Your Appointment</h1>
         <form
           action=""

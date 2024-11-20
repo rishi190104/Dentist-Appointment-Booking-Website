@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import FemaleDentist from "../assets/FemaleDentist.png"
 import MenDentist from "../assets/MenDentist.png"
+import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const AboutUs = () => {
+    useEffect(() => {
+          AOS.init();
+      }, [])
 
     const why = [
         {
@@ -31,12 +38,12 @@ const AboutUs = () => {
     <main className='w-full h-full md:pb-10 bg-gradient-to-b from-transparent via-teal-200 to-teal-600 md:p-0 p-7'>
         <div className='max-w-screen-xl mx-auto'>
         <h1 className="flex items-start text-4xl font-bold text-teal-900 pt-7">Here's Our Journey</h1>
-        <section>
+        <section data-aos="fade-up" data-aos-duration="500">
             <h1 className='flex justify-center items-center text-3xl font-bold text-teal-700 py-7'>Creating Smiles, Building Trust: Our 7-Year Journey</h1>
             <p className='text-xl py-2'>At <strong>[Your Clinic Name]</strong>, our mission has always been simple: to provide exceptional dental care in a warm, welcoming environment. Established 7 years ago, our clinic began with the vision of making high-quality dental services accessible and stress-free for everyone in our community. Today, we are proud to have grown into a trusted name in dental care, serving hundreds of happy patients every month.</p>
             <p className='text-xl py-2'>From the very beginning, we’ve been driven by a passion for excellence and innovation. Over the years, we’ve invested in the latest technology and expanded our services to include everything from preventive care to advanced cosmetic and restorative dentistry. What hasn’t changed is our unwavering commitment to treating every patient like family.</p>
         </section>
-        <section>
+        <section data-aos="fade-up " data-aos-duration="1000">
             <h1 className='flex justify-center items-center text-3xl font-bold text-teal-800 py-7' >Meet Our Doctors</h1>
             <div className='flex md:flex-row flex-col justify-center md:items-center items-start gap-y-2 gap-x-14'>
                
@@ -51,7 +58,7 @@ const AboutUs = () => {
         </section>
         <br />
         
-        <section>
+        <section data-aos="fade-up" data-aos-duration="1000">
         <div className='flex md:flex-row flex-col justify-center md:items-center items-start gap-y-2 gap-x-14'>
                
                <img src={MenDentist} alt="MenDentist" className='w-[333px]' />
@@ -63,7 +70,7 @@ const AboutUs = () => {
             </div>
             </div>
         </section>
-        <section>
+        <section data-aos="fade-up" data-aos-duration="1000">
             <h1 className='flex justify-center items-center text-3xl font-bold text-teal-800 py-7'>Why Choose Us?</h1>
             <div className='grid md:grid-cols-4 grid-cols-2 md:gap-x-4 gap-x-2 gap-y-3 md:p-0 px-5'>
                 {why.map(({id, heading, para}) => (
@@ -77,14 +84,20 @@ const AboutUs = () => {
                 ))}
             </div>
         </section>
-        <section>
+        <section data-aos="fade-up" data-aos-duration="1500">
             <p className='text-xl py-7'>At <strong>[Your Clinic Name]</strong>, your smile is more than just our job—it’s our passion. Join us on the journey to healthier, brighter smiles, one appointment at a time!</p>
+            
+            <Link
+            to="/form"
+            >
+            
             <button
             className="flex item-center justify-center bg-teal-700 text-white font-bold h-10  md:w-1/5 px-3 py-2 rounded-md  
             mx-auto mt-5 hover:shadow-md hover:shadow-black "
           >
             Book a Appointment
           </button>
+            </Link>
         </section>
         </div>
     </main>

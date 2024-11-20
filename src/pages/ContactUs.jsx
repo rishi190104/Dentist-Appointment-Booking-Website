@@ -1,14 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Form, Svg } from '../components'
 import CallIcon from "@mui/icons-material/Call";
 import PlaceIcon from '@mui/icons-material/Place';
 import EmailIcon from "@mui/icons-material/Email";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactUs = () => {
+
+  useEffect(() => {
+        AOS.init({duration: 500});
+    }, [])
   return (
     <main className='w-full h-full bg-gradient-to-b from-transparent via-teal-200 to-teal-600 py-9'>
-        <section className='flex flex-col md:flex-row justify-center items-center max-w-screen-xl mx-auto'>
+        <section className='flex flex-col md:flex-row justify-center items-center max-w-screen-xl mx-auto'
+        data-aos="fade-up"
+        >
         <div className='flex flex-col gap-y-2 p-5'>
         <h1 className='md:text-2xl text-xl font-bold flex items-center'>
        <Svg/>

@@ -1,8 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Svg from './Svg'
 import { Link } from 'react-router-dom'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Service = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     const services = [
         {
@@ -73,14 +79,17 @@ const Service = () => {
     ]
 
   return (
-    <section className='w-full h-full bg-gradient-to-b from-teal-200 to-transparent '>
+    <section className='w-full h-full bg-gradient-to-b from-teal-200 to-transparent scroll-smooth'>
         <h1 className="flex justify-center items-center text-4xl py-7 font-bold text-teal-900">Our Services</h1>
         <div className='grid  grid-cols-2 md:grid-cols-4 max-w-screen-xl mx-auto gap-x-5 gap-y-2'>
 
             {services.map(({id, treatment, to}) => (
                 <div key={id} 
                 className='w-full py-5 flex justify-center items-center  max-w-screen-xl mx-auto rounded-xl
-                bg-gradient-to-t from-teal-500 to-teal-600 cursor-pointer hover:shadow-lg hover:shadow-teal-950'
+                bg-gradient-to-t from-teal-500 to-teal-600 cursor-pointer hover:shadow-lg hover:shadow-teal-950
+               
+                '
+                data-aos="fade-up"
                 >
                     <Svg/>
                 

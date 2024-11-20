@@ -1,12 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import DentistAbout from '../assets/DentistAbout.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
 const Dentist = () => {
+  useEffect(() => {
+      AOS.init({duration: 1000});
+  }, [])
   return (
     <section className="w-full h-full bg-gradient-to-t from-teal-200 to-transparent  ">
       <h1 className="flex justify-center items-center text-4xl font-bold text-teal-900 pt-7">
         About the Dentist's
       </h1>
-      <div className="flex md:flex-row flex-col justify-center items-center p-10 max-w-screen-xl mx-auto ">
+      <div className="flex md:flex-row flex-col justify-center items-center p-10 max-w-screen-xl mx-auto "
+      data-aos="zoom-in-up"
+      >
         <img
           src = {DentistAbout}
           alt="DentistImage"

@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const Faq = () => {
+  useEffect(() => {
+        AOS.init({duration: 2000});
+    }, [])
   const faq = [
     {
       id: 1,
@@ -61,7 +68,9 @@ const Faq = () => {
       <h1 className="flex justify-center items-center text-4xl font-bold text-teal-900 py-7">
         FAQ
       </h1>
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto"
+       data-aos="fade-up"
+      >
         {faq.map(({ id, question, answer }) => (
           <Accordion sx={{ backgroundColor: "#19A6A6" }} key={id}>
             <AccordionSummary

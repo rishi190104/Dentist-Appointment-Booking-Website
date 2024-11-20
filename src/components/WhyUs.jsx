@@ -1,12 +1,22 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Clinic from "../assets/Clinic.png"
 import DentistTeam from "../assets/DentistTeam.png"
 import DentalTechnology from "../assets/DentalTechnology.png"
 import Environment from "../assets/Environment.png"
 import TreatmentPlans from "../assets/TreatmentPlans.png"
 import Website from "../assets/Website.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
+
 
 const WhyUs = () => {
+useEffect(() => {
+    AOS.init({duration: 1000});
+}, [])
+
   const content = [
     {
       id: 1,
@@ -57,11 +67,15 @@ const WhyUs = () => {
       <h1 className="flex justify-center items-center text-4xl py-7 font-bold text-teal-900">
         Why to Choose Us ?
       </h1>
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 p-5 gap-y-4 gap-x-6 max-w-screen-xl mx-auto ">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 p-5 gap-y-4 gap-x-6 max-w-screen-xl mx-auto"
+      data-aos="fade-up"
+      >
         {content.map(({ id, heading, para, src, alt }) => (
           <div
             key={id}
-            className="max-w-screen-xl mx-auto rounded-lg bg-gradient-to-t from-teal-400 to-teal-600 p-2 flex flex-col items-center justify-center "
+            className="max-w-screen-xl mx-auto rounded-lg bg-gradient-to-t from-teal-400 to-teal-600 p-2 flex flex-col items-center justify-center
+            
+            "
           >
             <img src={src} alt={alt} className="w-[333px]" />
             <h1 className="text-xl font-semibold"> {heading}</h1>
