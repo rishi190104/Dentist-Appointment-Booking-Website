@@ -4,6 +4,7 @@ import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import {Link} from "react-router-dom"
 
 const Footer = () => {
   const connect = [
@@ -27,22 +28,26 @@ const Footer = () => {
     {
       id: 1,
       list: "Home",
+      to: "",
     },
     {
       id: 2,
       list: "About us",
+      to: "aboutus",
     },
     {
       id: 3,
       list: "Treatments",
+      to: "treatments",
     },
-    {
-      id: 4,
-      list: "Testimonials",
-    },
+    // {
+    //   id: 4,
+    //   list: "Testimonials",
+    // },
     {
       id: 5,
       list: "Contact Us",
+      to: "contactus",
     },
   ];
 
@@ -50,30 +55,37 @@ const Footer = () => {
     {
       id: 1,
       treatment: "Root Canal",
+      to: "/RootCanal",
     },
     {
       id: 2,
       treatment: "Dental Fillings",
+      to: "/DentalFilling",
     },
     {
       id: 3,
       treatment: "Dentures",
+      to: "/Dentures",
     },
     {
       id: 4,
       treatment: "Dental Implants",
+      to: "/DentalImplants",
     },
     {
       id: 5,
       treatment: "Aligners & Braces",
+      to: "/Aligners&Braces",
     },
     {
       id: 6,
       treatment: "Teeth Cleaning",
+      to: "/TeethCleaning",
     },
     {
       id: 7,
       treatment: "Teeth Whitening",
+      to: "/TeethWhitening",
     },
   ];
 
@@ -81,26 +93,32 @@ const Footer = () => {
     {
       id: 1,
       treatment: "Smile Makeover",
+      to: "/SmileMakeover",
     },
     {
       id: 2,
       treatment: "Crowns & Bridges",
+      to: "/Crowns&Bridges",
     },
     {
       id: 3,
       treatment: "Kids Dental",
+      to: "/KidsDental",
     },
     {
       id: 4,
       treatment: "Tooth Extraction",
+      to: "/ToothExtraction",
     },
     {
       id: 5,
       treatment: "Scaling & Polishing",
+      to: "/Scaling&Polishing",
     },
     {
       id: 6,
       treatment: "Regular Check-ups",
+      to: "/RegularCheckups",
     },
   ];
 
@@ -147,12 +165,17 @@ const Footer = () => {
           <ul className="flex flex-col justify-center items-start">
             <h1 className="font-bold text-black text-xl">Important Links</h1>
             <br />
-            {lists.map(({ id, list }) => (
+            {lists.map(({ id, list, to }) => (
               <li
                 key={id}
                 className="hover:text-green-900 cursor-pointer hover:scale-110"
               >
-                {list}
+               <Link to={to}
+               
+               >
+               {list}
+               </Link>
+                
               </li>
             ))}
           </ul>
@@ -161,12 +184,14 @@ const Footer = () => {
           <ul className="flex flex-col justify-center items-start">
             <h1 className="font-bold text-black text-xl">Treatments</h1>
             <br />
-            {treatments.map(({ id, treatment }) => (
+            {treatments.map(({ id, treatment, to }) => (
               <li
                 key={id}
                 className="hover:text-green-900 cursor-pointer hover:scale-110"
               >
-                {treatment}
+               <Link to={to}>
+               {treatment}
+               </Link>
               </li>
             ))}
           </ul>
@@ -175,12 +200,14 @@ const Footer = () => {
           <ul className="flex flex-col justify-center items-start">
             <h1 className="font-bold text-black text-xl ">Treatments</h1>
             <br />
-            {treatments2.map(({ id, treatment }) => (
+            {treatments2.map(({ id, treatment, to }) => (
               <li
                 key={id}
                 className="hover:text-green-900 cursor-pointer hover:scale-110"
               >
-                {treatment}
+                <Link to={to}>
+               {treatment}
+               </Link>
               </li>
             ))}
           </ul>

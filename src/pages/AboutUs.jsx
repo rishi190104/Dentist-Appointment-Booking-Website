@@ -75,7 +75,7 @@ const AboutUs = () => {
         </section>
         <section data-aos="fade-up" data-aos-duration="1000">
             <h1 className='flex justify-center items-center text-3xl font-bold text-teal-800 py-7'>Why Choose Us?</h1>
-            <div className='grid md:grid-cols-4 grid-cols-2 md:gap-x-4 gap-x-2 gap-y-3 md:p-0 px-5'>
+            <div className='grid md:grid-cols-4 grid-cols-1 md:gap-x-4 gap-x-2 gap-y-3 md:p-0 px-5'>
                 {why.map(({id, heading, para}) => (
 
                 <div key={id} 
