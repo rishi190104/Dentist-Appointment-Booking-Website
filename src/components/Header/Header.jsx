@@ -24,11 +24,11 @@ const Header = () => {
       list: "Treatments",
       to: "/treatments"
     },
-    {
-      id: 4,
-      list: "Testimonials",
-      to: "/testimonials"
-    },
+    // {
+    //   id: 4,
+    //   list: "Testimonials",
+    //   to: "/testimonials"
+    // },
     {
       id: 5,
       list: "Contact Us",
@@ -59,7 +59,7 @@ const Header = () => {
 
         <div
           onClick={() => {
-            setNav(!nav);
+             setNav(!nav);
           }}
           className="md:hidden flex justify-center items-center"
         >

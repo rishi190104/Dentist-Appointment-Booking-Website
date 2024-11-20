@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const ToothExtraction = () => {
 
+  document.title = "Tooth Extraction"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

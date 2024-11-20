@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const AlignersBraces = () => {
 
+  document.title = "Aligners and Braces Treatment"
+
   useEffect(() => {
         AOS.init({duration: 500});
     }, [])

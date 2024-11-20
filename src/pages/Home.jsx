@@ -3,6 +3,9 @@ import {Dentist, Faq, Form, Location, Service, Welcome} from '../components/inde
 import {WhyUs} from '../components/index'
 
 const Home = () => {
+
+  document.title = "Dentist Appointment Booking Website"
+
   return (
     <>
     <Welcome />

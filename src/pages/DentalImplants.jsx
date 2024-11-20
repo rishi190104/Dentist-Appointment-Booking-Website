@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const DentalImplants = () => {
 
+  document.title = "Dental Implant Treatment"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

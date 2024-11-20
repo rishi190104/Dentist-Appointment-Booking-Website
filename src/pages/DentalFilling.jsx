@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const DentalFilling = () => {
 
+  document.title = "Dental Filling Treatment"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

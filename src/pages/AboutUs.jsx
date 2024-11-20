@@ -7,6 +7,9 @@ import 'aos/dist/aos.css';
 
 
 const AboutUs = () => {
+
+    document.title = "All About Dental Clinic Journey"
+
     useEffect(() => {
           AOS.init();
       }, [])

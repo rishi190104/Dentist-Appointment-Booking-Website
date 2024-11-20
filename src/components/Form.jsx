@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -14,6 +14,30 @@ const Form = ({className=""}) => {
 useEffect(() => {
       AOS.init({duration: 1500});
   }, [])
+
+  const [result, setResult] = useState("")
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "1442d92b-89a8-437f-b110-96378863fc6d");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("We'll respond to you Soon 😊");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    };
   const options = [
     {
       id: 1,
@@ -86,7 +110,9 @@ useEffect(() => {
         <form
           action=""
           className={`flex flex-col justify-center items-center py-10 gap-y-4  max-w-screen-xl ${className} p-10 rounded-xl bg-transparent border border-teal-950`}
+             onSubmit={onSubmit}
         >
+          <span> {result}</span>
           <input
             type="text"
             name="name"

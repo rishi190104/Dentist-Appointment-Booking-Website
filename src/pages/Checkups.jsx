@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const Checkups = () => {
 
+  document.title = "Why Regular Checkups are very important?"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

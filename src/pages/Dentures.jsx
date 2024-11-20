@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const Dentures = () => {
 
+  document.title = "Dentures"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

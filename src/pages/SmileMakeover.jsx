@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const SmileMakeover = () => {
 
+  document.title = "Smile Makeover"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

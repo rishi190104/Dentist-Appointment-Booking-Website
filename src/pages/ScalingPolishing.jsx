@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const ScalingPolishing = () => {
 
+  document.title = "Scaling and Polishing"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

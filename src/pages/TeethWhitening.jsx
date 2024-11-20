@@ -6,6 +6,8 @@ import 'aos/dist/aos.css';
 
 const TeethWhitening = () => {
 
+  document.title = "Teeth Whitening"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

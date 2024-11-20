@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const CrownsBridges = () => {
 
+  document.title = "Crowns and Bridges Treatment"
+
   useEffect(() => {
     AOS.init({duration: 500});
 }, [])

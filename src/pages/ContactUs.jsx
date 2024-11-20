@@ -8,6 +8,8 @@ import 'aos/dist/aos.css';
 
 const ContactUs = () => {
 
+  document.title = "Contact and Book your Appointment for best dental treatment near you"
+
   useEffect(() => {
         AOS.init({duration: 500});
     }, [])

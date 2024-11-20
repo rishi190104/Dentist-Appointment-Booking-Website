@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 
 const RootCanal = () => {
 
+    document.title = "Root Canal Treatment"
+
     useEffect(() => {
         AOS.init({duration: 500});
     }, [])
