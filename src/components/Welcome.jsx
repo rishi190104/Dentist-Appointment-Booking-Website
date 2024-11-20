@@ -1,5 +1,5 @@
 import React from "react";
-import smile from "../assets/smile.png";
+import {Link} from "react-scroll"
 
 const Welcome = () => {
   return (
@@ -27,9 +27,15 @@ const Welcome = () => {
         </p>
         <button
           className="flex item-center justify-center bg-teal-700 text-white font-bold h-10  md:w-1/6 px-3 py-2 rounded-md  
-            mx-auto mt-5 hover:bg-teal-500 "
+            mx-auto mt-5 hover:shadow-md hover:shadow-black "
         >
+        <Link
+       to="Form"
+       smooth
+       duration={500}
+       >
           Book a Appointment
+        </Link>
         </button>
       </div>
     </main>

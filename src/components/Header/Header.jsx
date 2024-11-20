@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -10,22 +12,27 @@ const Header = () => {
     {
       id: 1,
       list: "Home",
+      to: ""
     },
     {
       id: 2,
       list: "About us",
+      to: "/aboutus"
     },
     {
       id: 3,
       list: "Treatments",
+      to: "/treatments"
     },
     {
       id: 4,
       list: "Testimonials",
+      to: "/testimonials"
     },
     {
       id: 5,
       list: "Contact Us",
+      to: "/contactus"
     },
   ];
 
@@ -35,11 +42,19 @@ const Header = () => {
         <img src={logo} alt="Logo" className="w-[10rem]" />
 
         <ul className="hidden md:flex gap-x-4 text-xl text-black cursor-pointer ">
-          {lists.map(({ id, list }) => (
-            <li key={id} className="hover:scale-105 hover:text-green-900">
-              {list}
-            </li>
+          {lists.map(({ id, list,to }) => (
+             <li key={id} className="hover:scale-105 hover:text-green-900">
+             <NavLink 
+             to={to}
+             className={({isActive}) => `${isActive ? " text-green-900 font-bold text-xl" : "text-black"}
+             hover:scale-105 hover:text-green-900
+             `}
+             >
+             {list}
+             </NavLink>
+             </li>
           ))}
+           
         </ul>
 
         <div
@@ -61,24 +76,40 @@ const Header = () => {
            animate-fade-down animate-once animate-duration-1000 animate-ease-in-out animate-normal animate-fill-forwards
            "
           >
-            {lists.map(({ id, list }) => (
-              <li
-                key={id}
-                className="hover:scale-105 hover:text-green-900 border-b border-green-950 "
-              >
-                {list}
-              </li>
-            ))}
+          {lists.map(({ id, list,to }) => (
+             <li key={id} className="hover:scale-105 hover:text-green-900"
+             onClick={() => {
+              setNav(!nav)
+             }}
+             >
+             <NavLink 
+             to={to}
+             className={({isActive}) => `${isActive ? " text-green-900 font-bold text-xl" : "text-black"}
+             hover:scale-105 hover:text-green-900
+             `}
+             >
+             {list}
+             </NavLink>
+             </li>
+          ))}
           </ul>
         )}
+      
 
+       <Link
+       to="Form"
+       smooth
+       duration={500}
+       >
+       
         <button
           className="bg-teal-700 text-white font-bold h-10 px-3 py-2 rounded-md  
-         hover:bg-teal-500 top-32 mt-2 absolute md:static md:flex
+         hover:shadow-md hover:shadow-black top-32 mt-2 absolute md:static md:flex 
         "
         >
           Schedule a Callback
         </button>
+       </Link>
       </div>
     </header>
   );

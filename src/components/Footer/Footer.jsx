@@ -122,7 +122,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full h-auto bg-teal-400 mt-16">
+    <footer className="w-full h-auto bg-teal-400 ">
       <div className="grid md:grid-cols-6 grid-cols-2 px-4 py-2 text-black">
         <div>
           <img src={logo} alt="" className="w-full" />

@@ -3,7 +3,7 @@ import { Form } from '../components'
 
 const ToothExtraction = () => {
   return (
-    <main className='w-full h-full bg-gradient-to-b from-transparent via-teal-200 to-teal-500'>
+    <main className='w-full h-full bg-gradient-to-b from-transparent via-teal-200 to-teal-500 py-7'>
     <h1 className="flex  items-start text-4xl font-extrabold text-teal-900 py-7 max-w-screen-xl mx-auto">Tooth Extraction</h1>
     <div className='flex md:flex-row flex-col justify-center items-center max-w-screen-xl mx-auto gap-x-10'>
         <div className='flex flex-col justify-center items-start gap-y-2 p-4 md:p-0'>

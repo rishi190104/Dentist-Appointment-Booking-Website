@@ -57,7 +57,7 @@ const Faq = () => {
   ];
 
   return (
-    <section className="w-full h-full bg-gradient-to-b from-teal-200 to-transparent ">
+    <section className="w-full h-full py-16 bg-gradient-to-t from-teal-200 to-transparent ">
       <h1 className="flex justify-center items-center text-4xl font-bold text-teal-900 py-7">
         FAQ
       </h1>
@@ -70,11 +70,11 @@ const Faq = () => {
               }
               aria-controls="panel1-content"
               id="panel1-header"
-              className="font-bold"
+              className="font-bold text-xl"
             >
               {question}
             </AccordionSummary>
-            <AccordionDetails>{answer}</AccordionDetails>
+            <AccordionDetails className="text-xl">{answer}</AccordionDetails>
           </Accordion>
         ))}
       </div>

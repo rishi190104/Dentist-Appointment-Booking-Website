@@ -70,12 +70,12 @@ const Form = ({className=""}) => {
   }
 
   return (
-    <section className="w-full h-full my-10 ">
+    <section name='Form' className="w-full h-full pt-16 bg-gradient-to-t from-teal-200 to-transparent">
       <div className="max-w-screen-xl mx-auto">
         <h1 className="flex justify-center items-center text-3xl mb-5 font-bold text-teal-900">Book Your Appointment</h1>
         <form
           action=""
-          className={`flex flex-col justify-center items-center py-10 gap-y-4 bg-teal-400 max-w-screen-xl ${className}`}
+          className={`flex flex-col justify-center items-center py-10 gap-y-4  max-w-screen-xl ${className} p-10 rounded-xl bg-transparent border border-teal-950`}
         >
           <input
             type="text"
@@ -144,7 +144,7 @@ const Form = ({className=""}) => {
           /> */}
           <button
             className="flex item-center justify-center bg-teal-700 text-white font-bold h-10  md:w-1/5 px-3 py-2 rounded-md  
-            mx-auto mt-5 hover:bg-teal-500 hover:border-teal-700 hover:border hover:text-black"
+            mx-auto mt-5 hover:shadow-md hover:shadow-black"
           >
             Submit
           </button>
@@ -156,7 +156,4 @@ const Form = ({className=""}) => {
 
 export default Form;
 
-// site key => 6Ldna4MqAAAAAL7KxfMEQs5gIACs_oNupynhtQXi
-// secret key => 6Ldna4MqAAAAALSny9Gf1_2QOUpc0-Y6tLgwyN3b
 
-// 8661 9183 6041

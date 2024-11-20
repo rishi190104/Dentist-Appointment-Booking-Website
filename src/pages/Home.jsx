@@ -1,5 +1,5 @@
 import React from 'react'
-import {Dentist, Faq, Location, Service, Welcome} from '../components/index'
+import {Dentist, Faq, Form, Location, Service, Welcome} from '../components/index'
 import {WhyUs} from '../components/index'
 
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
     <WhyUs />
     <Dentist />
     <Service />
+    <Form/>
     <Location/>
     <Faq />
     </>

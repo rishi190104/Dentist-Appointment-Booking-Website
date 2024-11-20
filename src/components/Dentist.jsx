@@ -1,5 +1,5 @@
 import React from "react";
-
+import DentistAbout from '../assets/DentistAbout.png'
 const Dentist = () => {
   return (
     <section className="w-full h-full bg-gradient-to-t from-teal-200 to-transparent  ">
@@ -8,8 +8,8 @@ const Dentist = () => {
       </h1>
       <div className="flex md:flex-row flex-col justify-center items-center p-10 max-w-screen-xl mx-auto ">
         <img
-          src="https://img.freepik.com/premium-vector/dentist-woman-examining-patient-teeth-white-background_1308-92207.jpg"
-          alt=""
+          src = {DentistAbout}
+          alt="DentistImage"
           className="h-[333px]"
         />
         <div className="bg-teal-400 md:mx-36 p-3 rounded-lg">

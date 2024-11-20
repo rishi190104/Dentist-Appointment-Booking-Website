@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Svg from "./Svg";
+import { Link } from "react-router-dom";
 
 const Treatment = () => {
   const [treatment, setTreatment] = useState(false);
@@ -20,6 +21,7 @@ const Treatment = () => {
         animate-fade-right animate-once animate-duration-1000 animate-ease-out animate-normal animate-fill-forwards
         "
         >
+
           <h1 className="text-2xl font-bold  pb-2 flex items-center">
            <Svg />
             Root Canal
@@ -31,9 +33,13 @@ const Treatment = () => {
             vessels. If this pulp gets infected due to deep cavities, cracks, or
             an injury, it can cause severe pain or swelling. A root canal is
             done to remove....{" "}
+            <Link
+            to= '/RootCanal'
+            >
             <span className="font-bold cursor-pointer hover:text-white">
               Read More
             </span>
+            </Link>
           </p>
         </div>
         <br />
@@ -53,9 +59,13 @@ const Treatment = () => {
             infection. Fillings help restore the tooth's shape and function,
             making it strong again.The process of getting a filling is simple
             and quick. First, the dentist....{" "}
+            <Link
+            to= '/DentalFilling'
+            >
             <span className="font-bold cursor-pointer hover:text-white">
               Read More
             </span>
+            </Link>
           </p>
         </div>
         <br />
@@ -75,9 +85,13 @@ const Treatment = () => {
             Dentures are an option for people who have lost some or all of their
             teeth due to aging, gum disease, injury, or decay.There are two main
             types of dentures....{" "}
+            <Link
+            to= '/Dentures'
+            >
             <span className="font-bold cursor-pointer hover:text-white">
               Read More
             </span>
+            </Link>
           </p>
         </div>
         <br />
@@ -97,9 +111,13 @@ const Treatment = () => {
             small metal post, usually made of titanium, that is placed in your
             jawbone to act like the root of a tooth. Once the implant is
             securely....{" "}
+            <Link
+            to= '/DentalImplants'
+            >
             <span className="font-bold cursor-pointer hover:text-white">
               Read More
             </span>
+            </Link>
           </p>
         </div>
         <br />
@@ -118,9 +136,13 @@ const Treatment = () => {
             appearance of your smile but also your oral health by making it
             easier to clean your teeth and maintain healthy gums. Braces are
             metal or ceramic brackets attached to the teeth....{" "}
+            <Link
+            to= '/Aligners&Braces'
+            >
             <span className="font-bold cursor-pointer hover:text-white">
               Read More
             </span>
+            </Link>
           </p>
         </div>
         <br />
@@ -140,9 +162,13 @@ const Treatment = () => {
             can’t fully eliminate. This professional cleaning is done by a
             dentist or dental hygienist and is usually recommended every six
             months.....{" "}
+            <Link
+            to= '/TeethCleaning'
+            >
             <span className="font-bold cursor-pointer hover:text-white">
               Read More
             </span>
+            </Link>
           </p>
         </div>
 
@@ -152,7 +178,7 @@ const Treatment = () => {
               setBtn(true);
             }}
             className="flex item-center justify-center bg-teal-700 text-white font-bold h-10  md:w-1/6 px-3 py-2 rounded-md  
-            mx-auto mt-5 hover:bg-teal-500 "
+            mx-auto mt-5 hover:shadow-md hover:shadow-black "
           >
             Show More
           </button>
@@ -179,9 +205,13 @@ const Treatment = () => {
                   Teeth whitening helps improve your smile and boost your
                   confidence. There are different ways to whiten teeth.
                   Professional whitening ....{" "}
-                  <span className="font-bold cursor-pointer hover:text-white">
-                    Read More
-                  </span>
+                  <Link
+            to= '/TeethWhitening'
+            >
+            <span className="font-bold cursor-pointer hover:text-white">
+              Read More
+            </span>
+            </Link>
                 </p>
               </div>
               <br />
@@ -201,9 +231,13 @@ const Treatment = () => {
                   missing teeth. The goal is to create a beautiful and confident
                   smile that suits your face and personality. The process starts
                   with a consultation where the dentist examines your teeth ....{" "}
-                  <span className="font-bold cursor-pointer hover:text-white">
-                    Read More
-                  </span>
+                  <Link
+            to= '/SmileMakeover'
+            >
+            <span className="font-bold cursor-pointer hover:text-white">
+              Read More
+            </span>
+            </Link>
                 </p>
               </div>
               <br />
@@ -222,9 +256,13 @@ const Treatment = () => {
                   of your smile. Crowns are like caps that cover a damaged or
                   weak tooth. They can restore a tooth that is cracked, decayed,
                   or has had a root canal. .....{" "}
-                  <span className="font-bold cursor-pointer hover:text-white">
-                    Read More
-                  </span>
+                  <Link
+            to= '/Crowns&Bridges'
+            >
+            <span className="font-bold cursor-pointer hover:text-white">
+              Read More
+            </span>
+            </Link>
                 </p>
               </div>
               <br />
@@ -242,9 +280,13 @@ const Treatment = () => {
                   healthy teeth and gums that will last a lifetime. Taking care
                   of a child’s teeth from an early age can help prevent
                   cavities, gum disease, and other dental issues......{" "}
-                  <span className="font-bold cursor-pointer hover:text-white">
-                    Read More
-                  </span>
+                  <Link
+            to= '/KidsDental'
+            >
+            <span className="font-bold cursor-pointer hover:text-white">
+              Read More
+            </span>
+            </Link>
                 </p>
               </div>
               <br />
@@ -263,9 +305,13 @@ const Treatment = () => {
                   damaged or decayed to be saved. Tooth extractions may also be
                   necessary for other reasons, like overcrowding, impacted
                   wisdom teeth, or infection......{" "}
-                  <span className="font-bold cursor-pointer hover:text-white">
-                    Read More
-                  </span>
+                  <Link
+            to= '/ToothExtraction'
+            >
+            <span className="font-bold cursor-pointer hover:text-white">
+              Read More
+            </span>
+            </Link>
                 </p>
               </div>
               <br />
@@ -283,9 +329,13 @@ const Treatment = () => {
                   and maintain your teeth, keeping them healthy and looking
                   good. These procedures help remove plaque, tartar, and stains
                   that regular brushing and flossing might miss.......{" "}
-                  <span className="font-bold cursor-pointer hover:text-white">
-                    Read More
-                  </span>
+                  <Link
+            to= '/Scaling&Polishing'
+            >
+            <span className="font-bold cursor-pointer hover:text-white">
+              Read More
+            </span>
+            </Link>
                 </p>
               </div>
               <br />
@@ -304,9 +354,13 @@ const Treatment = () => {
                   recommended by your dentist) helps catch dental problems
                   early, often before they become serious or painful. During a
                   checkup, the dentist will examine your teeth......{" "}
-                  <span className="font-bold cursor-pointer hover:text-white">
-                    Read More
-                  </span>
+                  <Link
+            to= '/RegularCheckups'
+            >
+            <span className="font-bold cursor-pointer hover:text-white">
+              Read More
+            </span>
+            </Link>
                 </p>
               </div>
             </div>
@@ -316,7 +370,7 @@ const Treatment = () => {
                   setBtn(false);
                 }}
                 className="flex item-center justify-center bg-teal-700 text-white font-bold h-10 md:w-1/6 px-3 py-2 rounded-md  
-            mx-auto mt-5 hover:bg-teal-500 "
+            mx-auto mt-5 hover:shadow-md hover:shadow-black "
               >
                 Show Less
               </button>
