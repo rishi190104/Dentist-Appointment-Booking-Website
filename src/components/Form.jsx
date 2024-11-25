@@ -15,29 +15,35 @@ useEffect(() => {
       AOS.init({duration: 1500});
   }, [])
 
+  
   const [result, setResult] = useState("")
-    const onSubmit = async (event) => {
-      event.preventDefault();
-      setResult("Sending....");
-      const formData = new FormData(event.target);
-  
-      formData.append("access_key", "1442d92b-89a8-437f-b110-96378863fc6d");
-  
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        setResult("We'll respond to you Soon 😊");
-        event.target.reset();
-      } else {
-        console.log("Error", data);
-        setResult(data.message);
-      }
-    };
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "a995dd1f-17fc-4943-8f03-d246abc16dec");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+            setResult("We'll respond to you Soon 😊");
+            event.target.reset();
+          } else {
+            console.log("Error", res);
+            setResult(res.message);
+          }
+  };
   const options = [
     {
       id: 1,
@@ -158,6 +164,7 @@ useEffect(() => {
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={["DateTimePicker"]}>
               <DateTimePicker
+              name="calender"
                 label="Select Date and Time"
                 className="bg-transparent p-2 border w-80 text-black "
                 sx={{ backgroundColor: "transparent" }}
