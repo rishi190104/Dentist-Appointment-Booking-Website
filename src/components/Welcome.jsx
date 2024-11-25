@@ -10,7 +10,7 @@ const Welcome = () => {
       AOS.init({duration: 500});
   }, [])
   return (
-    <main className="w-full h-full bg-gradient-to-t from-teal-200 to-transparent mt-7">
+    <main className="w-full h-full bg-gradient-to-t from-teal-200 to-transparent mt-7"  >
       <div className="w-full flex justify-center items-center h-24  ">
         <h1 className="md:text-5xl text-3xl text-teal-900 italic animate-jump animate-once animate-duration-1000 animate-ease-in-out">
           "Your Smile Starts Here"

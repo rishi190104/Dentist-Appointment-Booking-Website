@@ -40,10 +40,11 @@ const Footer = () => {
       list: "Treatments",
       to: "treatments",
     },
-    // {
-    //   id: 4,
-    //   list: "Testimonials",
-    // },
+    {
+      id: 4,
+      list: "Testimonials",
+      to: "testimonials",
+    },
     {
       id: 5,
       list: "Contact Us",

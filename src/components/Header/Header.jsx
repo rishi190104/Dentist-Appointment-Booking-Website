@@ -24,11 +24,11 @@ const Header = () => {
       list: "Treatments",
       to: "/treatments"
     },
-    // {
-    //   id: 4,
-    //   list: "Testimonials",
-    //   to: "/testimonials"
-    // },
+    {
+      id: 4,
+      list: "Testimonials",
+      to: "/testimonials"
+    },
     {
       id: 5,
       list: "Contact Us",
@@ -110,7 +110,7 @@ const Header = () => {
        
         <button
           className="bg-teal-700 text-white font-bold h-10 px-3 py-2 rounded-md  
-         hover:shadow-md hover:shadow-black top-32 right-28 mt-2 absolute 
+         hover:shadow-md hover:shadow-black top-32 right-24 mt-2 absolute 
           md:flex lg:static 
         "
         >

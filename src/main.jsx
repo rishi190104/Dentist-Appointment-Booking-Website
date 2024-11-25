@@ -6,12 +6,14 @@ import {RootCanal, DentalFilling, Dentures, DentalImplants, AlignersBraces, Teet
   ToothExtraction, ScalingPolishing, Checkups, Home, Layout, AboutUs, TreatmentPage, ContactUs
 } from './pages/page.js'
 import Form from './components/Form.jsx'
+import Testimonials from './pages/Testimonials.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Home/>}/>
       <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path='/treatments' element={<TreatmentPage/>}/>
+      <Route path='/testimonials' element={<Testimonials/>}/>
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/form' element={<Form/>}/>
       <Route path='/RootCanal' element={<RootCanal/>}/>
