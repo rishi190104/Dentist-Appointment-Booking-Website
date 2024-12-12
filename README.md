@@ -8,7 +8,7 @@ Welcome to the **Dentist Appointment Booking Website**! This is a user-friendly,
 
 ## 😎 Live Demo
 
-**Visit:** **https://dentist-appointment-booking-website-o5y7.vercel.app/**
+**Visit:** **https://dentist-appointment-booking-website.vercel.app/**
 
 ---
 
